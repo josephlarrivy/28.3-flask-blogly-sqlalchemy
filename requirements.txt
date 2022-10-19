@@ -1,10 +1,5 @@
-# Flask==2.2.2
-# Werkzeug==2.2.2
-# psycopg2==2.9.4
-
 autopep8==1.4.4
 blinker==1.4
-# cffi==1.14.0
 Click==7.0
 Flask==1.1.1
 Flask-DebugToolbar==0.10.1

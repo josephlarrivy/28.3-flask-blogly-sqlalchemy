@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block title%}New Post{%endblock%}
+
+{%block content%}
+
+<h1>Add Post for {{user.first_name}}</h1>
+
+<form method="POST">
+<label for="title">Post Title
+    <input type="text" name="post_title">
+</label>
+<br>
+<label for="content">Content
+    <input type="text" name="post_content">
+</label>
+<button>Submit</button>
+</form>
+
+<a href="/list"><button>Cancel</button></a>
+
+{%endblock%}

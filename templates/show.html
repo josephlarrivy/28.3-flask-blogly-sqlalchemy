@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%block title%}{{user.first_name}}{%endblock%}
+
+{%block content%}
+<h1>{{user.first_name}} {{user.last_name}}</h1>
+
+<a href="/{{user.id}}/delete"><button>Delete</button></a>
+<a href="/{{user.id}}/edit"><button>Edit</button></a>
+<a href="/list"><button>Go Back</button></a>
+
+<h2>Posts</h2>
+
+<ul>
+{% for post in posts%}
+    <a href="/{{post.id}}/post_detail_page"><li>{{post.title}}</li></a>
+{%endfor%}
+</ul>
+
+<a href="/{{user.id}}/post_form"><button>Write Post</button></a>
+
+{%endblock%}
