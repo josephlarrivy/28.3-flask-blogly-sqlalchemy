@@ -8,6 +8,39 @@
 <form method="POST">
     <input type="text" name="post_title" placeholder={{post.title}}>
     <input type="content" name="post_content" placeholder={{post.content}}>
+
+
+
+
+
+
+
+<!-- -->
+
+{% for tag in tags %}
+    <div>
+      <input type="checkbox" value="{{ tag.id }}" id="tag_{{ tag.id }}"
+        {% if tag in post.tags %}checked{% endif %}
+        name="tags">
+      <label class="form-check-label" for="tag_{{ tag.id }}">
+        {{ tag.name }}
+      </label>
+    </div>
+    {% endfor %}
+
+
+
+
+
+<!-- -->
+
+
+
+
+
+
+
+
     <button>Submit</button>
 </form>
 

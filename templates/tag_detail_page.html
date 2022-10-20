@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block title%}{{tag.name}}{%endblock%}
+
+{% block content %}
+<h1>Details: {{tag.name}}</h1>
+
+<ul>
+{% for post in posts %}
+    <li>{{post.title}}</li>
+{% endfor %}
+</ul>
+
+<a href="/{{tag_id}}/edit_tag"><button>Edit</button></a>
+<a href="/{{tag_id}}/delete_tag"><button>Delete</button></a>
+<a href="/show_tags"><button>Back</button></a>
+
+{% endblock %}

@@ -6,10 +6,13 @@
 <h1>{{post.title}}</h1>
 <p>{{post.content}}</p>
 
+{% for tag in tags %}
+    <button>{{tag.name}}</button>
+{% endfor %}
 
-
-
-
+<br>
+<hr>
+<br>
 
 
 <a href="/{{post.id}}/delete_post"><button>Delete</button></a>
